@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grupo ENG | Construção Civil, Locação de Máquinas e Transportes</title>
+  <meta name="description" content="Grupo ENG: construção civil, locação de máquinas pesadas e transportes/logística com frota própria.">
+
+  <!-- Fontes: Barlow Condensed (títulos) e Barlow (texto). Para trocar, altere aqui e em --font-* no style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       COMO EDITAR FOTOS / TEXTOS / LINKS
+       - Fotos: troque o src="img/..." pelo nome do seu arquivo (pasta /img/).
+         O data-fallback é uma foto de exemplo usada só se o arquivo não existir.
+       - WhatsApp: o número fica em UM lugar só, no topo do script.js.
+         Cada botão com data-wa="..." leva a mensagem que você escrever ali.
+       - Redes sociais e e-mail: procure por "SOCIAL" e "E-MAIL" neste arquivo.
+       ===================================================================== -->
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="topo">
+    <div class="site-header__bar">
+      <!-- LOGO: arquivo para fundo escuro em /img/ -->
+      <a href="#inicio" class="logo" aria-label="Grupo ENG, voltar ao início">
+        <img src="img/WhatsApp Image 2026-10-19 at 08.58.42.jpeg (editado).png" alt="Grupo ENG — Construções, Transportes e Locações" width="130" height="48">
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn--orange nav__cta-mobile" data-wa="Olá! Vim pelo site do Grupo ENG." href="#contato">Fale no WhatsApp</a>
+      </nav>
+
+      <a class="btn btn--orange header-cta" data-wa="Olá! Vim pelo site do Grupo ENG e gostaria de falar com a equipe." href="#contato">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Fale no WhatsApp
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="inicio">
+      <!-- FOTO DO HERO -->
+      <img class="hero__bg" src="img/Captura de tela 2026-10-19 200606.png" data-fallback="https://images.unsplash.com/photo-1763624578810-5ac518e4fd4c?auto=format&fit=crop&w=2000&q=85" alt="Escavadeira do Grupo ENG em operação em um canteiro de obras" fetchpriority="high">
+      <div class="container hero__content">
+        <!-- TEXTO PRINCIPAL: edite à vontade -->
+        <h1>Obras, máquinas e cargas em movimento com um só parceiro.</h1>
+        <p>Construção civil, locação de máquinas pesadas e transportes integrados para entregar prazo, segurança e resultado.</p>
+        <div class="hero__actions">
+          <a class="btn btn--orange" data-wa="Olá! Vim pelo site do Grupo ENG e gostaria de solicitar um orçamento." href="#contato">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Solicitar orçamento
+          </a>
+          <a class="btn btn--ghost" href="#servicos">Ver nossos serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- As 3 frentes: cards que sobrepõem o hero (margem negativa no CSS) -->
+    <div class="container frentes">
+      <a class="frente frente--light" href="#construcao">
+        <img src="img/obra-01.jpg" data-fallback="https://images.unsplash.com/photo-1768677903496-becc4be07258?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy">
+        <div><h2>Construção Civil</h2><p>Obras do projeto à entrega</p></div>
+      </a>
+      <a class="frente frente--orange" href="#locacao">
+        <img src="img/maquina-01.jpg" data-fallback="https://images.unsplash.com/photo-1780054984720-20ccf265317f?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy">
+        <div><h2>Locação de Máquinas</h2><p>Frota revisada, pronta pra rodar</p></div>
+      </a>
+      <a class="frente frente--dark" href="#transportes">
+        <img src="img/Foto-caminhao.png" data-fallback="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=400&q=80" alt="" loading="lazy">
+        <div><h2>Transportes e Logística</h2><p>Carga chegando no prazo</p></div>
+      </a>
+    </div>
+
+    <!-- ============================ SERVIÇOS ============================ -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Três frentes, uma só equipe cuidando do seu projeto.</h2>
+          <p>Contrate separado ou combine os serviços: o orçamento sai direto no WhatsApp, sem burocracia.</p>
+        </div>
+
+        <div class="cards">
+          <!-- PILAR 1: CONSTRUÇÃO. Mensagem do WhatsApp no atributo data-wa -->
+          <article class="card card--light reveal" id="construcao">
+            <div class="card__photo"><img src="img/" data-fallback="https://images.unsplash.com/photo-1768677903496-becc4be07258?auto=format&fit=crop&w=1000&q=85" alt="Equipe em obra de construção civil" loading="lazy"></div>
+            <div class="card__body">
+              <span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-building"/></svg></span>
+              <h3>Engenharia e Construção Civil</h3>
+              <p>Execução de obras civis e industriais com planejamento rigoroso, equipe qualificada e controle em todas as etapas.</p>
+              <ul class="checks">
+                <li>Obras civis e industriais</li>
+                <li>Terraplanagem e pavimentação</li>
+                <li>Gestão e fiscalização de obras</li>
+              </ul>
+              <a class="btn btn--dark" data-wa="Olá! Vim pelo site do Grupo ENG e quero um orçamento de Construção Civil." href="#contato">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir orçamento
+              </a>
+            </div>
+          </article>
+
+          <!-- PILAR 2: LOCAÇÃO -->
+          <article class="card card--orange reveal" id="locacao">
+            <div class="card__photo"><img src="img/Gemini_Generated_Image_omcytjomcytjomcy.jfif" data-fallback="https://images.unsplash.com/photo-1780054984720-20ccf265317f?auto=format&fit=crop&w=1000&q=85" alt="Escavadeira e caminhão em operação" loading="lazy"></div>
+            <div class="card__body">
+              <span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-crane"/></svg></span>
+              <h3>Locação de Máquinas Pesadas</h3>
+              <p>Frota moderna e revisada para elevar a produtividade da sua operação, com suporte técnico especializado.</p>
+              <ul class="checks">
+                <li>Escavadeiras e retroescavadeiras</li>
+                <li>Pás carregadeiras e motoniveladoras</li>
+                <li>Caminhões e equipamentos</li>
+              </ul>
+              <a class="btn btn--dark" data-wa="Olá! Vim pelo site do Grupo ENG e quero alugar máquinas pesadas. Podem me passar valores e disponibilidade?" href="#contato">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir orçamento
+              </a>
+            </div>
+          </article>
+
+          <!-- PILAR 3: TRANSPORTES -->
+          <article class="card card--dark reveal" id="transportes">
+            <div class="card__photo"><img src="img/foto-caminhao-main.png" data-fallback="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1000&q=85" alt="Caminhão do Grupo ENG na estrada" loading="lazy"></div>
+            <div class="card__body">
+              <span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-truck"/></svg></span>
+              <h3>Transportes e Logística</h3>
+              <p>Transporte com segurança e agilidade para cargas, máquinas e insumos, com rota planejada do início ao fim.</p>
+              <ul class="checks">
+                <li>Transporte de máquinas pesadas</li>
+                <li>Cargas e insumos para obras</li>
+                <li>Planejamento logístico completo</li>
+              </ul>
+              <a class="btn btn--orange" data-wa="Olá! Vim pelo site do Grupo ENG e preciso de um orçamento de Transporte e Logística." href="#contato">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir orçamento
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ GALERIA ============================ -->
+    <section class="section section--gallery" id="galeria">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Trabalho real, resultado que dá pra ver.</h2>
+          <!-- Filtros: o data-filter precisa bater com o data-cat das fotos -->
+          <div class="filters" role="group" aria-label="Filtrar galeria">
+            <button type="button" class="chip is-active" data-filter="todas" aria-pressed="true">Tudo</button>
+            <button type="button" class="chip" data-filter="obras" aria-pressed="false">Obras prontas</button>
+            <button type="button" class="chip" data-filter="frota" aria-pressed="false">Frota de caminhões</button>
+            <button type="button" class="chip" data-filter="maquinas" aria-pressed="false">Maquinário em operação</button>
+          </div>
+        </div>
+
+        <!-- PARA ADICIONAR UMA FOTO: copie um bloco <figure>, troque src, alt, data-cat e a legenda.
+             Classes de tamanho (só em telas maiores): g-big (grande), g-wide (larga), g-tall (alta). -->
+        <div class="gallery" id="galeria-grid">
+          <figure class="g g-big" data-cat="maquinas">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Terraplanagem"><img src="img/maquina-02.jpg" data-fallback="https://images.unsplash.com/photo-1780054984792-c5105f20390a?auto=format&fit=crop&w=1200&q=85" alt="Máquina pesada em operação" loading="lazy"></button>
+            <figcaption>Terraplanagem</figcaption>
+          </figure>
+          <figure class="g" data-cat="obras">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Obra civil"><img src="img/obra-01.jpg" data-fallback="https://images.unsplash.com/photo-1768677903496-becc4be07258?auto=format&fit=crop&w=800&q=85" alt="Obra civil em andamento" loading="lazy"></button>
+            <figcaption>Obra civil</figcaption>
+          </figure>
+          <figure class="g" data-cat="frota">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Frota própria"><img src="img/caminhao-02.jpg" data-fallback="https://images.unsplash.com/photo-1485575301924-6891ef935dcd?auto=format&fit=crop&w=800&q=85" alt="Caminhão de carga na estrada" loading="lazy"></button>
+            <figcaption>Frota própria</figcaption>
+          </figure>
+          <figure class="g g-wide" data-cat="obras">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Equipe em campo"><img src="img/obra-02.jpg" data-fallback="https://images.unsplash.com/photo-1694521787162-5373b598945c?auto=format&fit=crop&w=1200&q=85" alt="Equipe técnica em canteiro de obras" loading="lazy"></button>
+            <figcaption>Equipe em campo</figcaption>
+          </figure>
+          <figure class="g g-tall" data-cat="maquinas">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Operação 24h"><img src="img/maquina-03.jpg" data-fallback="https://images.unsplash.com/photo-1761504537447-e39a3085d697?auto=format&fit=crop&w=800&q=85" alt="Escavadeiras trabalhando à noite" loading="lazy"></button>
+            <figcaption>Operação 24h</figcaption>
+          </figure>
+          <figure class="g" data-cat="frota">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Transporte de cargas"><img src="img/caminhao-01.jpg" data-fallback="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=800&q=85" alt="Caminhão do Grupo ENG transportando carga" loading="lazy"></button>
+            <figcaption>Transporte de cargas</figcaption>
+          </figure>
+          <figure class="g" data-cat="maquinas">
+            <button type="button" class="g__open" aria-label="Ampliar foto: Locação de máquinas"><img src="img/maquina-01.jpg" data-fallback="https://images.unsplash.com/photo-1780054984720-20ccf265317f?auto=format&fit=crop&w=800&q=85" alt="Escavadeira em obra" loading="lazy"></button>
+            <figcaption>Locação de máquinas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Janela de ampliação das fotos (elemento <dialog> nativo) -->
+    <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+      <button type="button" class="lightbox__close" aria-label="Fechar">×</button>
+      <img src="" alt="">
+      <p></p>
+    </dialog>
+
+    <!-- ============================ DIFERENCIAIS ============================ -->
+    <section class="section section--dark" id="diferenciais">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Estrutura própria, entrega que gera confiança.</h2>
+          <p>Nascemos da engenharia e crescemos com recursos próprios. É isso que nos permite assumir prazos e cumprir.</p>
+        </div>
+
+        <!-- NÚMEROS: confirme com o cliente antes de publicar -->
+        <div class="stats reveal">
+          <div><strong>+15</strong><span>anos de experiência</span></div>
+          <div><strong>+300</strong><span>projetos entregues</span></div>
+          <div><strong>+50</strong><span>máquinas na frota</span></div>
+          <div><strong>24h</strong><span>suporte operacional</span></div>
+        </div>
+
+        <div class="perks reveal">
+          <div class="perk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-truck"/></svg><h3>Frota própria</h3><p>Caminhões e máquinas do grupo: menos intermediários, mais controle de prazo e custo.</p></div>
+          <div class="perk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wrench"/></svg><h3>Manutenção em dia</h3><p>Equipamentos revisados com frequência para não parar a sua obra.</p></div>
+          <div class="perk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><h3>Pontualidade</h3><p>Cronograma combinado e cumprido, da chegada da máquina à entrega final.</p></div>
+          <div class="perk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg><h3>Segurança</h3><p>Equipes treinadas e processos alinhados às normas de segurança do setor.</p></div>
+        </div>
+
+        <!-- DEPOIMENTOS: textos de exemplo. Troque por depoimentos reais (com autorização) antes de publicar. -->
+        <div class="quotes reveal">
+          <figure><blockquote>“Depoimento de cliente sobre obra entregue no prazo.”</blockquote><figcaption><strong>Nome do cliente</strong> · Empresa / cidade</figcaption></figure>
+          <figure><blockquote>“Depoimento de cliente sobre locação de máquinas e atendimento.”</blockquote><figcaption><strong>Nome do cliente</strong> · Empresa / cidade</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTATO ============================ -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Vamos colocar o seu próximo projeto em movimento?</h2>
+        </div>
+
+        <div class="contact">
+          <!-- Formulário sem servidor: o script.js monta a mensagem e abre o WhatsApp -->
+          <form class="form reveal" id="form-contato">
+            <h3>Peça seu orçamento</h3>
+            <p>Preencha e continue a conversa no WhatsApp.</p>
+            <div class="form__row">
+              <label>Nome <input name="nome" required autocomplete="name" placeholder="Seu nome"></label>
+              <label>Telefone <input name="telefone" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000"></label>
+            </div>
+            <label>Serviço
+              <select name="servico">
+                <option>Construção Civil</option>
+                <option>Locação de Máquinas</option>
+                <option>Transportes e Logística</option>
+              </select>
+            </label>
+            <label>Mensagem (opcional) <textarea name="mensagem" rows="4" placeholder="Conte rapidamente o que você precisa"></textarea></label>
+            <button class="btn btn--orange" type="submit">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enviar pelo WhatsApp
+            </button>
+          </form>
+
+          <div class="contact__side reveal">
+            <!-- MAPA: no Google Maps, clique em Compartilhar > Incorporar um mapa e cole o src do iframe aqui -->
+            <div class="map">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.1225826070913!2d-38.129218854689675!3d-5.243429567375169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bbcf486e898afd%3A0x30dc9fdc7c4c5cdc!2sR.%20Jer%C3%B4nimo%20Gadelha%2C%203890%20-%20Jos%C3%A9%20Mendes%2C%20Tabuleiro%20do%20Norte%20-%20CE%2C%2062960-000%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1792467357634!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <div class="info">
+              <ul>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Tabuleiro do Norte, Ceará</li> <!-- ENDEREÇO -->
+                <li><a href="tel:+5500000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>(88) 00000-0000</a></li> <!-- TELEFONE -->
+                <li><a href="mailto:contato@grupoeng.com.br"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>contato@grupoeng.com.br</a></li> <!-- E-MAIL -->
+              </ul>
+              <!-- SOCIAL: troque os links pelos perfis reais -->
+              <div class="social">
+                <a href="https://instagram.com/eng.construtora_" target="_blank" rel="noopener" aria-label="Instagram do Grupo ENG"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+                <a data-wa="Olá! Vim pelo site do Grupo ENG." href="#contato" aria-label="WhatsApp do Grupo ENG"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ RODAPÉ ============================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__row">
+      <a href="#inicio" class="logo" aria-label="Grupo ENG, voltar ao início"><img src="img/WhatsApp Image 2026-10-19 at 08.58.42.jpeg (editado).png" alt="Grupo ENG" width="130" height="48" loading="lazy"></a>
+      <nav aria-label="Rodapé">
+        <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <p class="site-footer__copy">© <span id="ano">2026</span> Grupo ENG. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a class="wa-float" data-wa="Olá! Vim pelo site do Grupo ENG." href="#contato" aria-label="Falar com o Grupo ENG pelo WhatsApp">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- Ícones SVG reutilizáveis (referenciados com <use href="#i-nome">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="M8.3 7.8c.2-.5.5-.5.8-.5h.4c.2 0 .3 0 .5.4l.7 1.7c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.7 1.3 1.7 2.3 3.1 3 .2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.1l1.7.8c.3.1.5.2.5.4 0 .2-.1 1.2-.7 1.8-.6.6-1.4.8-2.2.7-1.1-.1-2.5-.6-4.3-2.2-2.1-1.8-3.3-4.2-3.4-5.5 0-.6.1-1 .5-1.4Z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 8h8v13M2 21h20M7 7h2M7 11h2M7 15h2M15 12h2M15 16h2"/></symbol>
+    <symbol id="i-crane" viewBox="0 0 24 24"><path d="M4 21h16M7 21V4h10v17M7 8h10M10 12h4M10 16h4M3 4h18"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8Z"/></symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
