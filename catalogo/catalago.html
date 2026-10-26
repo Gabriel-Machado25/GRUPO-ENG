@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Equipamentos | Grupo ENG</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        graphite: {
+                            DEFAULT: '#121212',
+                            light: '#2A2A2A',
+                        },
+                        engorange: {
+                            DEFAULT: '#FF5722',
+                            hover: '#E64A19',
+                            light: '#FF8A65'
+                        },
+                        lightbg: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Utilities */
+        .glass-nav {
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Hide scrollbar for cleaner look in horizontal scroll areas if any */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-lightbg text-gray-800 font-sans antialiased selection:bg-engorange selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="../index.html" aria-label="Grupo ENG, voltar ao início" class="flex-shrink-0 flex items-center">
+                    <img src="../img/WhatsApp Image 2026-10-19 at 08.58.42.jpeg (editado).png" alt="Grupo ENG" width="130" height="48" class="h-12 w-auto object-contain">
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#diferenciais" class="text-gray-300 hover:text-engorange transition-colors text-sm font-medium">Diferenciais</a>
+                    <a href="#linha-amarela" class="text-gray-300 hover:text-engorange transition-colors text-sm font-medium">Linha Amarela</a>
+                    <a href="#acesso" class="text-gray-300 hover:text-engorange transition-colors text-sm font-medium">Acesso</a>
+                    <a href="#apoio" class="text-gray-300 hover:text-engorange transition-colors text-sm font-medium">Apoio e Eventos</a>
+                    <a href="#contato" class="bg-engorange hover:bg-engorange-hover text-white px-5 py-2.5 rounded-full text-sm font-bold transition-colors shadow-lg shadow-engorange/20">
+                        Orçamento
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-graphite border-t border-gray-800 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="#diferenciais" class="mobile-link block px-3 py-3 text-base font-medium text-gray-300 hover:text-engorange hover:bg-gray-900 rounded-md">Diferenciais</a>
+                <a href="#linha-amarela" class="mobile-link block px-3 py-3 text-base font-medium text-gray-300 hover:text-engorange hover:bg-gray-900 rounded-md">Linha Amarela</a>
+                <a href="#acesso" class="mobile-link block px-3 py-3 text-base font-medium text-gray-300 hover:text-engorange hover:bg-gray-900 rounded-md">Acesso e Elevação</a>
+                <a href="#apoio" class="mobile-link block px-3 py-3 text-base font-medium text-gray-300 hover:text-engorange hover:bg-gray-900 rounded-md">Apoio e Eventos</a>
+                <a href="#contato" class="mobile-link block px-3 py-3 mt-4 text-center text-base font-bold text-white bg-engorange rounded-md">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-graphite pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        <!-- Decorative Background Element -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-engorange rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-gray-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
+            <span class="text-engorange font-bold tracking-widest uppercase text-sm mb-4 border border-engorange/30 bg-engorange/10 px-4 py-1.5 rounded-full">
+                One-Stop Shop para Obras
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6 max-w-4xl">
+                Catálogo Geral de <br class="hidden md:block" /> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-engorange to-yellow-500">Equipamentos & Infraestrutura</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-400 mb-10 font-light">
+                Soluções completas em máquinas pesadas, plataformas de acesso e apoio logístico para obras e eventos em um único fornecedor.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#catalogo" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-engorange hover:bg-engorange-hover shadow-lg shadow-engorange/30 transition-all transform hover:-translate-y-1">
+                    Ver Catálogo Completo
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- DIFFERENTIALS SECTION -->
+    <section id="diferenciais" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-graphite sm:text-4xl">Por que escolher o Grupo ENG?</h2>
+                <div class="w-20 h-1.5 bg-engorange mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 bg-lightbg rounded-2xl border border-gray-100 hover:shadow-xl hover:border-engorange/20 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-engorange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-graphite mb-3">Solução Integrada</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Máquinas, andaimes e infraestrutura básica em um único contrato, reduzindo a burocracia da sua obra.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="p-8 bg-lightbg rounded-2xl border border-gray-100 hover:shadow-xl hover:border-engorange/20 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-engorange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-graphite mb-3">Pronta Entrega</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Logística própria com frota de pranchas e caminhões, garantindo agilidade na mobilização.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 bg-lightbg rounded-2xl border border-gray-100 hover:shadow-xl hover:border-engorange/20 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-engorange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-graphite mb-3">Equipamentos Revisados</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Manutenção rigorosa e certificação técnica, operando sempre dentro das normas de segurança.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-8 bg-lightbg rounded-2xl border border-gray-100 hover:shadow-xl hover:border-engorange/20 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-engorange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-graphite mb-3">Atendimento Flexível</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Formatos de locação customizados: contratos por diária, semana, mês ou longo prazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG AREA -->
+    <div id="catalogo">
+        
+        <!-- Section 1: Linha Amarela -->
+        <section id="linha-amarela" class="py-20 bg-lightbg border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="p-3 bg-graphite rounded-lg text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-graphite">Máquinas Pesadas</h2>
+                        <p class="text-gray-500 font-medium">Linha Amarela & Terraplanagem</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Machine Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col group">
+                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/600x450/e2e8f0/64748b?text=Retroescavadeira" alt="Retroescavadeira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-engorange text-white text-xs font-bold px-3 py-1.5 rounded-md shadow-md uppercase tracking-wide">
+                                Com ou sem operador
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-graphite mb-4">Retroescavadeira 4x4</h3>
+                            <ul class="text-sm text-gray-600 mb-6 space-y-2 flex-grow">
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Potência:</strong> 75 a 90 HP</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Escavação:</strong> Até 4,3m de profundidade</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Aplicação:</strong> Terraplanagem, abertura de valas e demolição leve.</li>
+                            </ul>
+                            <a href="#contato" class="w-full mt-auto block text-graphite font-semibold text-center border-2 border-graphite rounded-xl py-3 hover:bg-graphite hover:text-white transition-colors">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <!-- Machine Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col group">
+                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/600x450/e2e8f0/64748b?text=Caminhão+Basculante" alt="Caminhão Basculante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-engorange text-white text-xs font-bold px-3 py-1.5 rounded-md shadow-md uppercase tracking-wide">
+                                Frota Própria
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-graphite mb-4">Caminhão Basculante 6x4</h3>
+                            <ul class="text-sm text-gray-600 mb-6 space-y-2 flex-grow">
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Tração:</strong> 6x4 Heavy-Duty</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Capacidade:</strong> Alta capacidade de carga em m³</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Aplicação:</strong> Transporte de agregados, terra e bota-fora.</li>
+                            </ul>
+                            <a href="#contato" class="w-full mt-auto block text-graphite font-semibold text-center border-2 border-graphite rounded-xl py-3 hover:bg-graphite hover:text-white transition-colors">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Acesso e Elevação -->
+        <section id="acesso" class="py-20 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="p-3 bg-graphite rounded-lg text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-graphite">Acesso & Elevação</h2>
+                        <p class="text-gray-500 font-medium">Estruturas para Trabalho em Altura</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Access Card 1 -->
+                    <div class="bg-lightbg rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col group">
+                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/600x450/cbd5e1/64748b?text=Andaimes" alt="Andaimes Tubulares" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-engorange text-white text-xs font-bold px-3 py-1.5 rounded-md shadow-md uppercase tracking-wide">
+                                Kits sob medida
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-graphite mb-4">Andaimes Tubulares</h3>
+                            <ul class="text-sm text-gray-600 mb-6 space-y-2 flex-grow">
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Especificações:</strong> Padrão normativo NR-18</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Acessórios:</strong> Rodízios, sapatas ajustáveis, guarda-corpo</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Aplicação:</strong> Elevação para manutenção e acesso a fachadas.</li>
+                            </ul>
+                            <a href="#contato" class="w-full mt-auto block text-graphite font-semibold text-center border-2 border-graphite rounded-xl py-3 hover:bg-graphite hover:text-white transition-colors">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Apoio e Eventos -->
+        <section id="apoio" class="py-20 bg-lightbg border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="p-3 bg-graphite rounded-lg text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-graphite">Apoio Operacional & Eventos</h2>
+                        <p class="text-gray-500 font-medium">Infraestrutura para canteiros e festas</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Support Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col group">
+                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/600x450/e2e8f0/64748b?text=Mesas+e+Cadeiras" alt="Mesas e Cadeiras" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-engorange text-white text-xs font-bold px-3 py-1.5 rounded-md shadow-md uppercase tracking-wide">
+                                Atendimento em Grandes Lotes
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-graphite mb-4">Jogos de Mesas e Cadeiras</h3>
+                            <ul class="text-sm text-gray-600 mb-6 space-y-2 flex-grow">
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Material:</strong> Polipropileno de alta resistência</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Cores:</strong> Branca ou Preta</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Aplicação:</strong> Refeitórios de obra, eventos e auditórios temporários.</li>
+                            </ul>
+                            <a href="#contato" class="w-full mt-auto block text-graphite font-semibold text-center border-2 border-graphite rounded-xl py-3 hover:bg-graphite hover:text-white transition-colors">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <!-- Support Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col group">
+                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/600x450/e2e8f0/64748b?text=Tendas+Piramidais" alt="Tendas Piramidais" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 right-4 bg-engorange text-white text-xs font-bold px-3 py-1.5 rounded-md shadow-md uppercase tracking-wide">
+                                Montagem Rápida
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-graphite mb-4">Tendas Piramidais</h3>
+                            <ul class="text-sm text-gray-600 mb-6 space-y-2 flex-grow">
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Estrutura:</strong> Tubular de alta resistência</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Cobertura:</strong> Lona com proteção UV e antimofo</li>
+                                <li class="flex items-start"><span class="text-engorange mr-2">▪</span> <strong>Aplicação:</strong> Cobertura de eventos, áreas de vivência e armazenagem.</li>
+                            </ul>
+                            <a href="#contato" class="w-full mt-auto block text-graphite font-semibold text-center border-2 border-graphite rounded-xl py-3 hover:bg-graphite hover:text-white transition-colors">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER / CTA SECTION -->
+    <section id="contato" class="bg-graphite pt-24 pb-16 relative overflow-hidden border-t-8 border-engorange">
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-engorange rounded-full filter blur-[100px] opacity-20"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Pronto para equipar a sua obra ou evento?</h2>
+            <p class="text-gray-400 text-lg mb-12">O processo é simples. Centralize tudo com o Grupo ENG e foque no que importa.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-graphite-light p-6 rounded-xl border border-gray-800">
+                    <div class="w-10 h-10 bg-engorange text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">1</div>
+                    <h4 class="text-white font-semibold">Escolha o Equipamento</h4>
+                </div>
+                <div class="bg-graphite-light p-6 rounded-xl border border-gray-800">
+                    <div class="w-10 h-10 bg-engorange text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">2</div>
+                    <h4 class="text-white font-semibold">Defina o Período</h4>
+                </div>
+                <div class="bg-graphite-light p-6 rounded-xl border border-gray-800">
+                    <div class="w-10 h-10 bg-engorange text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">3</div>
+                    <h4 class="text-white font-semibold">Receba no Local</h4>
+                </div>
+            </div>
+
+            <a href="https://wa.me/5508007008000?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20através%20do%20catálogo%20digital." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-10 py-5 text-xl font-bold rounded-full text-white bg-green-500 hover:bg-green-600 shadow-xl shadow-green-500/30 transition-all transform hover:-translate-y-1 w-full sm:w-auto">
+                <svg class="w-8 h-8 mr-3 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chamar no WhatsApp
+            </a>
+        </div>
+        
+        <div class="mt-16 border-t border-gray-800 pt-8 text-center px-4">
+            <p class="text-gray-500 text-sm">© 2026 Grupo ENG - Construções, Transportes & Locações. Todos os direitos reservados.</p>
+        </div>
+    </section>
+
+    <!-- FLOATING ACTION BUTTON (FAB) - WHATSAPP -->
+    <a href="https://wa.me/5508007008000" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 flex items-center justify-center group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        
+        <!-- Tooltip -->
+        <span class="absolute right-full mr-4 bg-gray-900 text-white text-sm px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Fale conosco
+        </span>
+    </a>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const iconPath = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            // Toggle menu function
+            const toggleMenu = () => {
+                menu.classList.toggle('hidden');
+                // Change icon (hamburger to X)
+                if (menu.classList.contains('hidden')) {
+                    iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                } else {
+                    iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                }
+            };
+
+            btn.addEventListener('click', toggleMenu);
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!menu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+            
+            // Dynamic Navbar blur on scroll (Optional enhancement)
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-lg');
+                } else {
+                    nav.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
