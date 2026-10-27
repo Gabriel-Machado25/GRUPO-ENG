@@ -3,8 +3,8 @@
    ========================================================================== */
 
 /* 1. CONFIGURAÇÃO — troque o número aqui e TODOS os botões de WhatsApp se atualizam.
-   Formato: DDI + DDD + número, só dígitos (ex.: 5588999998888). */
-const WHATSAPP_NUMBER = "5500000000000";
+   Formato: DDI + DDD + número, só dígitos (ex.: 558899639573). */
+const WHATSAPP_NUMBER = "558899639573";
 
 // Marca o <html> para o CSS saber que o JavaScript está ativo (evita esconder conteúdo sem JS)
 document.documentElement.classList.add("js");
