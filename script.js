@@ -2,19 +2,21 @@
    GRUPO ENG — script.js (JavaScript puro, sem bibliotecas)
    ========================================================================== */
 
-/* 1. CONFIGURAÇÃO — troque o número aqui e TODOS os botões de WhatsApp se atualizam.
-   Formato: DDI + DDD + número, só dígitos (ex.: 558899639573). */
+/* 1. CONFIGURAÇÃO — números em formato DDI + DDD + telefone, só dígitos.
+   O número de construção também pode ser usado com data-wa-service="construction". */
 const WHATSAPP_NUMBER = "558899639573";
+const WHATSAPP_CONSTRUCTION_NUMBER = "5588997112057";
 
 // Marca o <html> para o CSS saber que o JavaScript está ativo (evita esconder conteúdo sem JS)
 document.documentElement.classList.add("js");
 
 /** Monta o link do WhatsApp. encodeURIComponent converte espaços e acentos para formato de URL. */
-const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+const waLink = (msg, number = WHATSAPP_NUMBER) => `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
+const waNumberFor = (service) => service === "construction" ? WHATSAPP_CONSTRUCTION_NUMBER : WHATSAPP_NUMBER;
 
 /* 2. BOTÕES DE WHATSAPP — todo elemento com data-wa="mensagem" vira um link pronto */
 document.querySelectorAll("[data-wa]").forEach((el) => {
-  el.href = waLink(el.dataset.wa);
+  el.href = waLink(el.dataset.wa, waNumberFor(el.dataset.waService));
   el.target = "_blank";
   el.rel = "noopener";
 });
@@ -85,8 +87,10 @@ lightbox.addEventListener("click", (e) => e.target === lightbox && lightbox.clos
 document.getElementById("form-contato").addEventListener("submit", (e) => {
   e.preventDefault();
   const d = Object.fromEntries(new FormData(e.target));
-  const msg = `Olá! Meu nome é ${d.nome}. Tenho interesse em: ${d.servico}. Meu telefone: ${d.telefone}.` + (d.mensagem ? ` Detalhes: ${d.mensagem}` : "");
-  window.open(waLink(msg), "_blank", "noopener");
+  const service = e.target.querySelector('[name="servico"]');
+  const serviceName = service.selectedOptions[0].textContent;
+  const msg = `Olá! Meu nome é ${d.nome}. Tenho interesse em: ${serviceName}. Meu telefone: ${d.telefone}.` + (d.mensagem ? ` Detalhes: ${d.mensagem}` : "");
+  window.open(waLink(msg, waNumberFor(service.selectedOptions[0].dataset.waService)), "_blank", "noopener");
 });
 
 /* 9. ANIMAÇÃO DE ENTRADA — IntersectionObserver avisa quando o elemento aparece na tela */

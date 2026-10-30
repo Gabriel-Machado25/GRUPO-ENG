@@ -31,12 +31,15 @@ Enquanto uma foto não existir, o site usa uma imagem de exemplo (atributo data-
 Personalização
 WhatsApp
 
-Edite a constante no topo do script.js:
+Edite as constantes no topo do script.js:
 
 js
-const WHATSAPP_NUMBER = "5500000000000"; // DDI + DDD + número, só dígitos
+const WHATSAPP_NUMBER = "558899639573"; // contatos gerais, locação e transportes
+const WHATSAPP_CONSTRUCTION_NUMBER = "5588997112057";
 
-Todos os botões se atualizam. A mensagem de cada botão fica no atributo data-wa="..." do index.html.
+O número principal atende contatos gerais, locação e transportes. Construção civil usa
+WHATSAPP_CONSTRUCTION_NUMBER; botões e opções do formulário podem usar data-wa-service="construction".
+A mensagem de cada botão fica no atributo data-wa="..." do index.html.
 
 Cores, fontes e arredondamentos
 

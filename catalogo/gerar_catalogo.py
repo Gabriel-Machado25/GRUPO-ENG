@@ -33,10 +33,10 @@ BASE = Path(__file__).resolve().parent
 # 1) DADOS DO CLIENTE  (trocar pelos dados reais antes de enviar)
 # ============================================================
 ANO = "2026"
-WHATS_NUM = "5588999990000"                 # formato internacional, só números
-WHATS_TXT = "(88) 99999-0000"               # como aparece escrito
-TELEFONE = "(88) 99999-0000"
-TEL_LINK = "+5588999990000"
+WHATS_NUM = "558899639573"                  # formato internacional, só números
+WHATS_TXT = "(88) 9 9963-9573"              # como aparece escrito
+TELEFONE = "(88) 9 9963-9573"
+TEL_LINK = "+558899639573"
 EMAIL = "comercial@grupoeng.com.br"
 SITE = "www.grupoeng.com.br"
 SITE_URL = "https://www.grupoeng.com.br"

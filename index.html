@@ -21,8 +21,9 @@
        COMO EDITAR FOTOS / TEXTOS / LINKS
        - Fotos: troque o src="img/..." pelo nome do seu arquivo (pasta /img/).
          O data-fallback é uma foto de exemplo usada só se o arquivo não existir.
-       - WhatsApp: o número fica em UM lugar só, no topo do script.js.
-         Cada botão com data-wa="..." leva a mensagem que você escrever ali.
+       - WhatsApp: números e roteamento ficam no topo do script.js.
+         Cada botão com data-wa="..." leva a mensagem que você escrever ali;
+         use data-wa-service="construction" para direcionar à construção.
        - Redes sociais e e-mail: procure por "SOCIAL" e "E-MAIL" neste arquivo.
        ===================================================================== -->
 
@@ -65,7 +66,7 @@
         <p>Construção civil, locação de máquinas pesadas e transportes integrados para entregar prazo, segurança e resultado.</p>
         <p id="frase-de-efeito">Clique no botão abaixo e faça já seu orçamento!</p>
         <div class="hero__actions">
-          <a class="btn btn--orange" data-wa="Olá! Vim pelo site do Grupo ENG e gostaria de solicitar um orçamento." href="#contato">
+          <a class="btn btn--orange" data-wa="Olá! Vim pelo site do Grupo ENG e gostaria de solicitar um orçamento." data-wa-service="construction" href="#contato">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>
             Solicitar orçamento
           </a>
@@ -111,7 +112,7 @@
                 <li>Terraplanagem e pavimentação</li>
                 <li>Gestão e fiscalização de obras</li>
               </ul>
-              <a class="btn btn--dark" data-wa="Olá! Vim pelo site do Grupo ENG e quero um orçamento de Construção." href="#contato">
+              <a class="btn btn--dark" data-wa="Olá! Vim pelo site do Grupo ENG e quero um orçamento de Construção." data-wa-service="construction" href="#contato">
                 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir orçamento
               </a>
             </div>
@@ -260,7 +261,7 @@
             </div>
             <label>Serviço
               <select name="servico">
-                <option>Construção Civil</option>
+                <option data-wa-service="construction">Construção Civil</option>
                 <option>Locação de Máquinas</option>
                 <option>Transportes e Logística</option>
               </select>
