@@ -21,6 +21,27 @@ document.querySelectorAll("[data-wa]").forEach((el) => {
   el.rel = "noopener";
 });
 
+/* 2.1 SELETOR DO WHATSAPP FLUTUANTE — encaminha cada serviço com sua mensagem padrão */
+const waPicker = document.getElementById("wa-picker");
+const waPickerOpen = document.getElementById("wa-picker-open");
+const waMessages = {
+  construction: "Olá! Vim pelo site do Grupo ENG e quero um orçamento de Construção.",
+  rental: "Olá! Vim pelo site do Grupo ENG e quero alugar alguns equipamentos. Podem me passar valores e disponibilidade?",
+  transport: "Olá! Vim pelo site do Grupo ENG e preciso de um orçamento de Transporte e Logística."
+};
+
+waPickerOpen.addEventListener("click", () => waPicker.showModal());
+waPicker.querySelector(".wa-picker__close").addEventListener("click", () => waPicker.close());
+waPicker.addEventListener("click", (e) => e.target === waPicker && waPicker.close());
+waPicker.querySelectorAll("[data-wa-option]").forEach((option) => {
+  option.addEventListener("click", () => {
+    const service = option.dataset.waOption;
+    const number = service === "construction" ? WHATSAPP_CONSTRUCTION_NUMBER : WHATSAPP_NUMBER;
+    window.open(waLink(waMessages[service], number), "_blank", "noopener");
+    waPicker.close();
+  });
+});
+
 /* 3. MENU MOBILE — abre/fecha o painel e atualiza aria-expanded (acessibilidade) */
 const toggle = document.querySelector(".menu-toggle");
 const menu = document.getElementById("menu");

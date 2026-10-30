@@ -306,10 +306,20 @@
     <p class="site-footer__copy">© <span id="ano">2026</span> Grupo ENG. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão flutuante de WhatsApp -->
-  <a class="wa-float" data-wa="Olá! Vim pelo site do Grupo ENG e gostaria de um serviço!" href="#contato" aria-label="Falar com o Grupo ENG pelo WhatsApp">
+  <!-- Seletor de serviço do botão flutuante de WhatsApp -->
+  <dialog class="wa-picker" id="wa-picker" aria-labelledby="wa-picker-title">
+    <button class="wa-picker__close" type="button" aria-label="Fechar opções">×</button>
+    <h2 id="wa-picker-title">Como podemos ajudar?</h2>
+    <p>Escolha o serviço para continuar pelo WhatsApp.</p>
+    <div class="wa-picker__options">
+      <button type="button" data-wa-option="construction">Construção</button>
+      <button type="button" data-wa-option="rental">Locação</button>
+      <button type="button" data-wa-option="transport">Transporte</button>
+    </div>
+  </dialog>
+  <button class="wa-float" id="wa-picker-open" type="button" aria-label="Escolher serviço para falar pelo WhatsApp" aria-haspopup="dialog" aria-controls="wa-picker">
     <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-  </a>
+  </button>
 
   <!-- Ícones SVG reutilizáveis (referenciados com <use href="#i-nome">) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
